@@ -32,7 +32,7 @@ const NAV = [
   { to: "/configuracoes", label: "Configurações", icon: Settings, admin: true },
 ] as const;
 
-function NavList({ onNavigate }: { onNavigate?: () => void }) {
+function NavList({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const { isAdmin } = useAuth();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   return (
@@ -60,7 +60,7 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
+function SidebarContent({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
   return (
