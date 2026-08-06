@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AvaliacaoRouteImport } from './routes/avaliacao'
+import { Route as CenariosRouteImport } from './routes/cenarios'
+import { Route as ClientesRouteImport } from './routes/clientes'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as CruzamentosRouteImport } from './routes/cruzamentos'
+import { Route as EvolucaoRouteImport } from './routes/evolucao'
+import { Route as MapaRouteImport } from './routes/mapa'
+import { Route as PautasRouteImport } from './routes/pautas'
+import { Route as PesquisasRouteImport } from './routes/pesquisas'
+import { Route as QualidadeRouteImport } from './routes/qualidade'
+import { Route as QuestionariosRouteImport } from './routes/questionarios'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as VisaoGeralRouteImport } from './routes/visao-geral'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AvaliacaoRoute = AvaliacaoRouteImport.update({
+  id: '/avaliacao',
+  path: '/avaliacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CenariosRoute = CenariosRouteImport.update({
+  id: '/cenarios',
+  path: '/cenarios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientesRoute = ClientesRouteImport.update({
+  id: '/clientes',
+  path: '/clientes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CruzamentosRoute = CruzamentosRouteImport.update({
+  id: '/cruzamentos',
+  path: '/cruzamentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvolucaoRoute = EvolucaoRouteImport.update({
+  id: '/evolucao',
+  path: '/evolucao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapaRoute = MapaRouteImport.update({
+  id: '/mapa',
+  path: '/mapa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PautasRoute = PautasRouteImport.update({
+  id: '/pautas',
+  path: '/pautas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PesquisasRoute = PesquisasRouteImport.update({
+  id: '/pesquisas',
+  path: '/pesquisas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualidadeRoute = QualidadeRouteImport.update({
+  id: '/qualidade',
+  path: '/qualidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuestionariosRoute = QuestionariosRouteImport.update({
+  id: '/questionarios',
+  path: '/questionarios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VisaoGeralRoute = VisaoGeralRouteImport.update({
+  id: '/visao-geral',
+  path: '/visao-geral',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/avaliacao': typeof AvaliacaoRoute
+  '/cenarios': typeof CenariosRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/cruzamentos': typeof CruzamentosRoute
+  '/evolucao': typeof EvolucaoRoute
+  '/mapa': typeof MapaRoute
+  '/pautas': typeof PautasRoute
+  '/pesquisas': typeof PesquisasRoute
+  '/qualidade': typeof QualidadeRoute
+  '/questionarios': typeof QuestionariosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/visao-geral': typeof VisaoGeralRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/avaliacao': typeof AvaliacaoRoute
+  '/cenarios': typeof CenariosRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/cruzamentos': typeof CruzamentosRoute
+  '/evolucao': typeof EvolucaoRoute
+  '/mapa': typeof MapaRoute
+  '/pautas': typeof PautasRoute
+  '/pesquisas': typeof PesquisasRoute
+  '/qualidade': typeof QualidadeRoute
+  '/questionarios': typeof QuestionariosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/visao-geral': typeof VisaoGeralRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/avaliacao': typeof AvaliacaoRoute
+  '/cenarios': typeof CenariosRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/cruzamentos': typeof CruzamentosRoute
+  '/evolucao': typeof EvolucaoRoute
+  '/mapa': typeof MapaRoute
+  '/pautas': typeof PautasRoute
+  '/pesquisas': typeof PesquisasRoute
+  '/qualidade': typeof QualidadeRoute
+  '/questionarios': typeof QuestionariosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/visao-geral': typeof VisaoGeralRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/avaliacao'
+    | '/cenarios'
+    | '/clientes'
+    | '/configuracoes'
+    | '/cruzamentos'
+    | '/evolucao'
+    | '/mapa'
+    | '/pautas'
+    | '/pesquisas'
+    | '/qualidade'
+    | '/questionarios'
+    | '/relatorios'
+    | '/visao-geral'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/avaliacao'
+    | '/cenarios'
+    | '/clientes'
+    | '/configuracoes'
+    | '/cruzamentos'
+    | '/evolucao'
+    | '/mapa'
+    | '/pautas'
+    | '/pesquisas'
+    | '/qualidade'
+    | '/questionarios'
+    | '/relatorios'
+    | '/visao-geral'
+  id:
+    | '__root__'
+    | '/'
+    | '/avaliacao'
+    | '/cenarios'
+    | '/clientes'
+    | '/configuracoes'
+    | '/cruzamentos'
+    | '/evolucao'
+    | '/mapa'
+    | '/pautas'
+    | '/pesquisas'
+    | '/qualidade'
+    | '/questionarios'
+    | '/relatorios'
+    | '/visao-geral'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AvaliacaoRoute: typeof AvaliacaoRoute
+  CenariosRoute: typeof CenariosRoute
+  ClientesRoute: typeof ClientesRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
+  CruzamentosRoute: typeof CruzamentosRoute
+  EvolucaoRoute: typeof EvolucaoRoute
+  MapaRoute: typeof MapaRoute
+  PautasRoute: typeof PautasRoute
+  PesquisasRoute: typeof PesquisasRoute
+  QualidadeRoute: typeof QualidadeRoute
+  QuestionariosRoute: typeof QuestionariosRoute
+  RelatoriosRoute: typeof RelatoriosRoute
+  VisaoGeralRoute: typeof VisaoGeralRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +221,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/avaliacao': {
+      id: '/avaliacao'
+      path: '/avaliacao'
+      fullPath: '/avaliacao'
+      preLoaderRoute: typeof AvaliacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cenarios': {
+      id: '/cenarios'
+      path: '/cenarios'
+      fullPath: '/cenarios'
+      preLoaderRoute: typeof CenariosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clientes': {
+      id: '/clientes'
+      path: '/clientes'
+      fullPath: '/clientes'
+      preLoaderRoute: typeof ClientesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cruzamentos': {
+      id: '/cruzamentos'
+      path: '/cruzamentos'
+      fullPath: '/cruzamentos'
+      preLoaderRoute: typeof CruzamentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evolucao': {
+      id: '/evolucao'
+      path: '/evolucao'
+      fullPath: '/evolucao'
+      preLoaderRoute: typeof EvolucaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mapa': {
+      id: '/mapa'
+      path: '/mapa'
+      fullPath: '/mapa'
+      preLoaderRoute: typeof MapaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pautas': {
+      id: '/pautas'
+      path: '/pautas'
+      fullPath: '/pautas'
+      preLoaderRoute: typeof PautasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pesquisas': {
+      id: '/pesquisas'
+      path: '/pesquisas'
+      fullPath: '/pesquisas'
+      preLoaderRoute: typeof PesquisasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qualidade': {
+      id: '/qualidade'
+      path: '/qualidade'
+      fullPath: '/qualidade'
+      preLoaderRoute: typeof QualidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/questionarios': {
+      id: '/questionarios'
+      path: '/questionarios'
+      fullPath: '/questionarios'
+      preLoaderRoute: typeof QuestionariosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/visao-geral': {
+      id: '/visao-geral'
+      path: '/visao-geral'
+      fullPath: '/visao-geral'
+      preLoaderRoute: typeof VisaoGeralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AvaliacaoRoute: AvaliacaoRoute,
+  CenariosRoute: CenariosRoute,
+  ClientesRoute: ClientesRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
+  CruzamentosRoute: CruzamentosRoute,
+  EvolucaoRoute: EvolucaoRoute,
+  MapaRoute: MapaRoute,
+  PautasRoute: PautasRoute,
+  PesquisasRoute: PesquisasRoute,
+  QualidadeRoute: QualidadeRoute,
+  QuestionariosRoute: QuestionariosRoute,
+  RelatoriosRoute: RelatoriosRoute,
+  VisaoGeralRoute: VisaoGeralRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
