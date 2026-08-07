@@ -3,6 +3,7 @@ import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import {
   BarChart3, CalendarRange, ClipboardList, Database, FileBarChart, Gauge, LayoutDashboard,
   Map as MapIcon, Menu, Rows3, Settings, ShieldCheck, Target, Users, LogOut, RotateCcw,
+  RefreshCw,
 } from "lucide-react";
 import { EthosLogo } from "@/components/brand/EthosLogo";
 import { BaseCard } from "@/components/panel/BaseCard";
@@ -25,6 +26,7 @@ const NAV = [
   { to: "/avaliacao", label: "Avaliação de Governos", icon: Gauge, admin: false },
   { to: "/pautas", label: "Pautas e Prioridades", icon: ClipboardList, admin: false },
   { to: "/pesquisas", label: "Central de Pesquisas", icon: Database, admin: true },
+  { to: "/integracoes", label: "Integrações KoboToolbox", icon: RefreshCw, admin: true },
   { to: "/questionarios", label: "Questionários", icon: FileBarChart, admin: true },
   { to: "/qualidade", label: "Qualidade dos Dados", icon: ShieldCheck, admin: true },
   { to: "/relatorios", label: "Relatórios e Exportações", icon: CalendarRange, admin: false },
