@@ -16,6 +16,7 @@ import { Route as ClientesRouteImport } from './routes/clientes'
 import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
 import { Route as CruzamentosRouteImport } from './routes/cruzamentos'
 import { Route as EvolucaoRouteImport } from './routes/evolucao'
+import { Route as IntegracoesRouteImport } from './routes/integracoes'
 import { Route as MapaRouteImport } from './routes/mapa'
 import { Route as PautasRouteImport } from './routes/pautas'
 import { Route as PesquisasRouteImport } from './routes/pesquisas'
@@ -57,6 +58,11 @@ const CruzamentosRoute = CruzamentosRouteImport.update({
 const EvolucaoRoute = EvolucaoRouteImport.update({
   id: '/evolucao',
   path: '/evolucao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntegracoesRoute = IntegracoesRouteImport.update({
+  id: '/integracoes',
+  path: '/integracoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapaRoute = MapaRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/configuracoes': typeof ConfiguracoesRoute
   '/cruzamentos': typeof CruzamentosRoute
   '/evolucao': typeof EvolucaoRoute
+  '/integracoes': typeof IntegracoesRoute
   '/mapa': typeof MapaRoute
   '/pautas': typeof PautasRoute
   '/pesquisas': typeof PesquisasRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/configuracoes': typeof ConfiguracoesRoute
   '/cruzamentos': typeof CruzamentosRoute
   '/evolucao': typeof EvolucaoRoute
+  '/integracoes': typeof IntegracoesRoute
   '/mapa': typeof MapaRoute
   '/pautas': typeof PautasRoute
   '/pesquisas': typeof PesquisasRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/configuracoes': typeof ConfiguracoesRoute
   '/cruzamentos': typeof CruzamentosRoute
   '/evolucao': typeof EvolucaoRoute
+  '/integracoes': typeof IntegracoesRoute
   '/mapa': typeof MapaRoute
   '/pautas': typeof PautasRoute
   '/pesquisas': typeof PesquisasRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/configuracoes'
     | '/cruzamentos'
     | '/evolucao'
+    | '/integracoes'
     | '/mapa'
     | '/pautas'
     | '/pesquisas'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/configuracoes'
     | '/cruzamentos'
     | '/evolucao'
+    | '/integracoes'
     | '/mapa'
     | '/pautas'
     | '/pesquisas'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/configuracoes'
     | '/cruzamentos'
     | '/evolucao'
+    | '/integracoes'
     | '/mapa'
     | '/pautas'
     | '/pesquisas'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   ConfiguracoesRoute: typeof ConfiguracoesRoute
   CruzamentosRoute: typeof CruzamentosRoute
   EvolucaoRoute: typeof EvolucaoRoute
+  IntegracoesRoute: typeof IntegracoesRoute
   MapaRoute: typeof MapaRoute
   PautasRoute: typeof PautasRoute
   PesquisasRoute: typeof PesquisasRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/evolucao'
       fullPath: '/evolucao'
       preLoaderRoute: typeof EvolucaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/integracoes': {
+      id: '/integracoes'
+      path: '/integracoes'
+      fullPath: '/integracoes'
+      preLoaderRoute: typeof IntegracoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mapa': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConfiguracoesRoute: ConfiguracoesRoute,
   CruzamentosRoute: CruzamentosRoute,
   EvolucaoRoute: EvolucaoRoute,
+  IntegracoesRoute: IntegracoesRoute,
   MapaRoute: MapaRoute,
   PautasRoute: PautasRoute,
   PesquisasRoute: PesquisasRoute,
