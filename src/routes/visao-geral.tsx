@@ -123,9 +123,9 @@ function Overview() {
             </Panel>
           </div>
 
-          <div className="grid gap-4 xl:grid-cols-3">
-            {(["renda", "escolaridade", "religiao"] as const).map((v) => (
-              <Panel key={v} title={v === "renda" ? "Renda familiar" : v === "escolaridade" ? "Escolaridade" : "Religião"}>
+          <div className="grid gap-4 xl:grid-cols-2">
+            {(["renda", "escolaridade"] as const).map((v) => (
+              <Panel key={v} title={v === "renda" ? "Renda familiar" : "Escolaridade"}>
                 <BarList data={profileDistribution(activeSurveys, v)} />
               </Panel>
             ))}
