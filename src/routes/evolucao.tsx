@@ -69,7 +69,7 @@ function EvolutionPage() {
                 }}
               />
               {govs.map((c) => (
-                <Line key={c.id} type="monotone" dataKey={c.ballotName} stroke={c.color} strokeWidth={2} dot={{ r: 3 }} />
+                <Line key={c.id} type="monotone" dataKey={c.ballotName} stroke={c.color} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={false} />
               ))}
             </LineChart>
           </ResponsiveContainer>

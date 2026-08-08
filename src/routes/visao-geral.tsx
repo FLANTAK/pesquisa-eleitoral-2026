@@ -109,6 +109,7 @@ function Overview() {
                         innerRadius={38}
                         outerRadius={62}
                         paddingAngle={2}
+                        isAnimationActive={false}
                       >
                         {profileDistribution(activeSurveys, "sexo").map((_, i) => (
                           <Cell key={i} fill={i === 0 ? "var(--ink-2)" : "var(--gold)"} />
@@ -153,6 +154,7 @@ function Overview() {
                         stroke={c.color}
                         strokeWidth={2}
                         dot={{ r: 3 }}
+                        isAnimationActive={false}
                       />
                     ))}
                   </LineChart>
@@ -178,7 +180,7 @@ function Overview() {
                   <XAxis type="number" tick={{ fontSize: 11 }} stroke="var(--muted-foreground)" />
                   <YAxis type="category" dataKey="label" width={120} tick={{ fontSize: 11 }} stroke="var(--muted-foreground)" />
                   <RTooltip formatter={(v: number, _n, p) => [`${v} entrevistas`, p.payload.label]} />
-                  <Bar dataKey="abs" fill="var(--gold)" radius={[0, 4, 4, 0]} />
+                  <Bar dataKey="abs" fill="var(--gold)" radius={[0, 4, 4, 0]} isAnimationActive={false} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
